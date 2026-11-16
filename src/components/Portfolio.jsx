@@ -6,9 +6,16 @@ import screenshot2 from "../../assets/img/objects.png";
 import screenshot3 from "../../assets/img/glosa.png";
 
 function Portfolio() {
+    const [isVisible, setIsVisible] = useState(false);  
+
     return (
         <div className="Home">
-        <h1>My React App</h1>
+        <button onClick={() => setIsVisible(!isVisible)}>
+            {isVisible ? 'Hide content' : 'Show content'}
+        </button>
+        {isVisible && (
+            <>
+          <h1>My React App</h1>
             <h1>Hello world!</h1>
             <div className="App">
                 <Cards 
@@ -51,6 +58,9 @@ function Portfolio() {
                 challenges="I faced no real challenges. and the program was written with AI assistance, so it was easy to write. I was the one stearing."
                 />
             </div>
+            </>
+        )}    
+
         </div>
   );
 }
