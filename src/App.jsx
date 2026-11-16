@@ -9,18 +9,22 @@ import Home from './components/Home.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import About from './components/About.jsx';
 import NavBar from "./components/NavBar.jsx";
+import { Navigate } from 'react-router'; 
 
 
 
 function App() {
   return (
     <>
-      <NavBar />
+    
       <BrowserRouter>
+        <NavBar />
+        <br />
         <Routes>
-          <Route path="/components/Home" element={<Home />} />
-          <Route path="/components/About" element={<About />} />
-          <Route path="/components/Portfolio" element={<Portfolio />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </>

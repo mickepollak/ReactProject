@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../App.jsx';
 import Cards from "../components/Cards.jsx";
 import screenshot1 from "../../assets/img/dj.png";
 import screenshot2 from "../../assets/img/objects.png";
