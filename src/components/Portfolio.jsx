@@ -9,13 +9,12 @@ function Portfolio() {
 
     return (
         <div className="Home">
-        <button onClick={() => setIsVisible(!isVisible)}>
+        <button className="btn" onClick={() => setIsVisible(!isVisible)}>
             {isVisible ? 'Hide content' : 'Show content'}
         </button>
         {isVisible && (
             <>
-          <h1>My React App</h1>
-            <h1>Hello world!</h1>
+            <h1>Portfolio</h1>
             <div className="App">
                 <Cards 
                 name="Dj website"

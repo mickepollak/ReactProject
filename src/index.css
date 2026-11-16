@@ -172,7 +172,7 @@ code {
 }
 
 .card {
-  background: var(--eggshell);
+  background: var(--surface);
   flex: 0 1 420px;
   width: min(100%, 360px);
   display: flex;
@@ -181,7 +181,7 @@ code {
   overflow: hidden;
   text-align: left;
   background: linear-gradient(180deg, var(--surface-2) 0%, var(--surface) 42%);
-  border: 1px solid var(--border);
+  border: 0px solid var(--border);
   border-radius: 20px;
   box-shadow: var(--shadow);
   transition:
@@ -280,10 +280,6 @@ code {
 
 
 
-
-
-
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -333,4 +329,23 @@ code {
     padding: 10px 12px;
     font-size: 14px;
   }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #a1a1aa;
+
+  background-color: var(--surface);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+ 
+.btn:hover {
+  color: #ffffff;
+  background: var(--bg-glow-2);
 }
